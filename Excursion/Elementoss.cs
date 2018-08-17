@@ -28,17 +28,23 @@ namespace Excursion
         }
         private void GuardarDatos()
         {
-            using (CnxEF db = new CnxEF())
+            try
             {
                 Elementos e = new Elementos();
                 e.Nombre = txtElemento.Text;
                 e.Calorias = int.Parse(txtCalorias.Text);
                 e.Peso = int.Parse(txtPeso.Text);
-                
-                db.SaveChanges(e);
+
+                using (CnxEF db = new CnxEF())
+                {
+                    db.Elementos.Add(e);
+                    db.SaveChanges();
+                }
             }
-               
-           
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
         }
     }
 }

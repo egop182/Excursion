@@ -1,7 +1,6 @@
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\Excursion.exe.config
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\Excursion.exe
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\Excursion.pdb
-C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\obj\Debug\Excursion.csprojResolveAssemblyReference.cache
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\obj\Debug\Excursion.Properties.Resources.resources
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\obj\Debug\Excursion.csproj.GenerateResource.Cache
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\obj\Debug\Excursion.exe

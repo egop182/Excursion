@@ -12,12 +12,17 @@
         {
         }
 
-        public object Elementos { get; set; }
-        public object Riscos { get; set; }
-
-        internal void SaveChanges(Elementos e)
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new NotImplementedException();
+            throw new UnintentionalCodeFirstException();
         }
+
+        public virtual DbSet<Elementos> Elementos { get; set; }
+        public virtual DbSet<Riscos> Riscos { get; set; }
+
+        //internal void SaveChanges(Elementos e)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

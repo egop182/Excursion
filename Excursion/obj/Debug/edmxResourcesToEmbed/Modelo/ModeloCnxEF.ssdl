@@ -1,7 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CnxEfExcursionistas.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'Excursionistas.dbo.Elementos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityType Name="Elementos">
     <Key>
       <PropertyRef Name="IdElementos" />
@@ -11,8 +9,6 @@ advertencia 6002: La tabla o vista 'Excursionistas.dbo.Elementos' no tiene defin
     <Property Name="Peso" Type="int" />
     <Property Name="IdElementos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
-  <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'Excursionistas.dbo.Riscos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityType Name="Riscos">
     <Key>
       <PropertyRef Name="IdRiscos" />
@@ -23,21 +19,7 @@ advertencia 6002: La tabla o vista 'Excursionistas.dbo.Riscos' no tiene definida
     <Property Name="IdRiscos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityContainer Name="CnxEfExcursionistasStoreContainer">
-    <EntitySet Name="Elementos" EntityType="Self.Elementos" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Elementos].[Nombre] AS [Nombre], 
-    [Elementos].[Calorias] AS [Calorias], 
-    [Elementos].[Peso] AS [Peso], 
-    [Elementos].[IdElementos] AS [IdElementos]
-    FROM [dbo].[Elementos] AS [Elementos]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="Riscos" EntityType="Self.Riscos" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Riscos].[Nombre] AS [Nombre], 
-    [Riscos].[Calorias] AS [Calorias], 
-    [Riscos].[Peso] AS [Peso], 
-    [Riscos].[IdRiscos] AS [IdRiscos]
-    FROM [dbo].[Riscos] AS [Riscos]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="Elementos" EntityType="Self.Elementos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Riscos" EntityType="Self.Riscos" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
