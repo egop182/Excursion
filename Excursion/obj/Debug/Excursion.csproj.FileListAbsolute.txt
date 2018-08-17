@@ -2,8 +2,16 @@ C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\Excursion.e
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\Excursion.exe
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\Excursion.pdb
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\obj\Debug\Excursion.csprojResolveAssemblyReference.cache
-C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\obj\Debug\Excursion.Elementos.resources
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\obj\Debug\Excursion.Properties.Resources.resources
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\obj\Debug\Excursion.csproj.GenerateResource.Cache
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\obj\Debug\Excursion.exe
 C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\obj\Debug\Excursion.pdb
+C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\EntityFramework.dll
+C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\MySql.Data.dll
+C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\EntityFramework.xml
+C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\MySql.Data.xml
+C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\bin\Debug\MySql.Data.Entity.EF6.xml
+C:\Users\edwin.ospina\Documents\GitHub\Excursion\Excursion\obj\Debug\Excursion.Elementoss.resources

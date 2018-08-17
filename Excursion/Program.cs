@@ -16,7 +16,7 @@ namespace Excursion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Elementos());
+            Application.Run(new Elementoss());
         }
     }
 }

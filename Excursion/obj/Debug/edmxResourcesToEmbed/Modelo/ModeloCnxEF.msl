@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CnxEfExcursionistasStoreContainer" CdmEntityContainer="CnxEF">
+    <EntitySetMapping Name="Elementos">
+      <EntityTypeMapping TypeName="CnxEfExcursionistas.Elementos">
+        <MappingFragment StoreEntitySet="Elementos">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Calorias" ColumnName="Calorias" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="IdElementos" ColumnName="IdElementos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Riscos">
+      <EntityTypeMapping TypeName="CnxEfExcursionistas.Riscos">
+        <MappingFragment StoreEntitySet="Riscos">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Calorias" ColumnName="Calorias" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="IdRiscos" ColumnName="IdRiscos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

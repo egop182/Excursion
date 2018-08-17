@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CnxEfExcursionistas.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Excursionistas.dbo.Elementos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="Elementos">
+          <Key>
+            <PropertyRef Name="IdElementos" />
+          </Key>
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Calorias" Type="int" />
+          <Property Name="Peso" Type="int" />
+          <Property Name="IdElementos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Excursionistas.dbo.Riscos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="Riscos">
+          <Key>
+            <PropertyRef Name="IdRiscos" />
+          </Key>
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Calorias" Type="int" />
+          <Property Name="Peso" Type="int" />
+          <Property Name="IdRiscos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CnxEfExcursionistasStoreContainer">
+          <EntitySet Name="Elementos" EntityType="Self.Elementos" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Elementos].[Nombre] AS [Nombre], 
+    [Elementos].[Calorias] AS [Calorias], 
+    [Elementos].[Peso] AS [Peso], 
+    [Elementos].[IdElementos] AS [IdElementos]
+    FROM [dbo].[Elementos] AS [Elementos]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Riscos" EntityType="Self.Riscos" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Riscos].[Nombre] AS [Nombre], 
+    [Riscos].[Calorias] AS [Calorias], 
+    [Riscos].[Peso] AS [Peso], 
+    [Riscos].[IdRiscos] AS [IdRiscos]
+    FROM [dbo].[Riscos] AS [Riscos]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CnxEfExcursionistas" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Elementos">
+          <Key>
+            <PropertyRef Name="IdElementos" />
+          </Key>
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Calorias" Type="Int32" />
+          <Property Name="Peso" Type="Int32" />
+          <Property Name="IdElementos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Riscos">
+          <Key>
+            <PropertyRef Name="IdRiscos" />
+          </Key>
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Calorias" Type="Int32" />
+          <Property Name="Peso" Type="Int32" />
+          <Property Name="IdRiscos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="CnxEF" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Elementos" EntityType="Self.Elementos" />
+          <EntitySet Name="Riscos" EntityType="Self.Riscos" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CnxEfExcursionistasStoreContainer" CdmEntityContainer="CnxEF">
+          <EntitySetMapping Name="Elementos">
+            <EntityTypeMapping TypeName="CnxEfExcursionistas.Elementos">
+              <MappingFragment StoreEntitySet="Elementos">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Calorias" ColumnName="Calorias" />
+                <ScalarProperty Name="Peso" ColumnName="Peso" />
+                <ScalarProperty Name="IdElementos" ColumnName="IdElementos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Riscos">
+            <EntityTypeMapping TypeName="CnxEfExcursionistas.Riscos">
+              <MappingFragment StoreEntitySet="Riscos">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Calorias" ColumnName="Calorias" />
+                <ScalarProperty Name="Peso" ColumnName="Peso" />
+                <ScalarProperty Name="IdRiscos" ColumnName="IdRiscos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
