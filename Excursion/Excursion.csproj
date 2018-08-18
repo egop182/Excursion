@@ -99,8 +99,15 @@
     <Compile Include="Modelo\Riscos.cs">
       <DependentUpon>ModeloCnxEF.tt</DependentUpon>
     </Compile>
+    <Compile Include="objElementos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Riscoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Riscoss.Designer.cs">
+      <DependentUpon>Riscoss.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Elementoss.resx">
       <DependentUpon>Elementoss.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +120,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Riscoss.resx">
+      <DependentUpon>Riscoss.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Modelo\ModeloCnxEF.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModeloCnxEF.Designer.cs</LastGenOutput>

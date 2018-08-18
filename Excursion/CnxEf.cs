@@ -18,7 +18,7 @@
         }
 
         public virtual DbSet<Elementos> Elementos { get; set; }
-        public virtual DbSet<Riscos> Riscos { get; set; }
+        public virtual DbSet<Riscoss> Riscos { get; set; }
 
         //internal void SaveChanges(Elementos e)
         //{

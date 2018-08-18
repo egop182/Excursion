@@ -19,9 +19,7 @@ namespace Excursion
         {
             InitializeComponent();
         }
-        
-        
-        
+                
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             GuardarDatos();
@@ -45,6 +43,12 @@ namespace Excursion
             {
                 MessageBox.Show(exp.Message);
             }
+        }
+
+        private void riscosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Riscoss ris = new Riscoss();
+            ris.Show();
         }
     }
 }

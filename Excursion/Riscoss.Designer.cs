@@ -1,6 +1,6 @@
 ﻿namespace Excursion
 {
-    partial class Riscos
+    partial class Riscoss
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnSeleccionarElementos = new System.Windows.Forms.Button();
-            this.txtRisco = new System.Windows.Forms.TextBox();
+            this.txtNombreRisco = new System.Windows.Forms.TextBox();
             this.txtCalorias = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.lblRisco = new System.Windows.Forms.Label();
@@ -51,13 +51,14 @@
             this.btnSeleccionarElementos.TabIndex = 0;
             this.btnSeleccionarElementos.Text = "Seleccionar Elementos";
             this.btnSeleccionarElementos.UseVisualStyleBackColor = true;
+            this.btnSeleccionarElementos.Click += new System.EventHandler(this.btnSeleccionarElementos_Click);
             // 
-            // txtRisco
+            // txtNombreRisco
             // 
-            this.txtRisco.Location = new System.Drawing.Point(23, 108);
-            this.txtRisco.Name = "txtRisco";
-            this.txtRisco.Size = new System.Drawing.Size(166, 22);
-            this.txtRisco.TabIndex = 1;
+            this.txtNombreRisco.Location = new System.Drawing.Point(23, 108);
+            this.txtNombreRisco.Name = "txtNombreRisco";
+            this.txtNombreRisco.Size = new System.Drawing.Size(166, 22);
+            this.txtNombreRisco.TabIndex = 1;
             // 
             // txtCalorias
             // 
@@ -104,7 +105,7 @@
             // 
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.lblRisco);
-            this.groupBox1.Controls.Add(this.txtRisco);
+            this.groupBox1.Controls.Add(this.txtNombreRisco);
             this.groupBox1.Location = new System.Drawing.Point(13, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(467, 195);
@@ -134,7 +135,7 @@
             this.dgvElementosSeleccionados.Size = new System.Drawing.Size(467, 155);
             this.dgvElementosSeleccionados.TabIndex = 8;
             // 
-            // Riscos
+            // Riscoss
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,7 +143,7 @@
             this.Controls.Add(this.dgvElementosSeleccionados);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSeleccionarElementos);
-            this.Name = "Riscos";
+            this.Name = "Riscoss";
             this.Text = "Riscos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -156,7 +157,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnSeleccionarElementos;
-        private System.Windows.Forms.TextBox txtRisco;
+        private System.Windows.Forms.TextBox txtNombreRisco;
         private System.Windows.Forms.TextBox txtCalorias;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.Label lblRisco;
