@@ -18,28 +18,35 @@ namespace Excursion
         {
             InitializeComponent();
         }
-
+        Riscos r = new Riscos();
 
         private void btnSeleccionarElementos_Click(object sender, EventArgs e)
         {
             GuardarRiscos();
             llenarLista();
-
         }
 
         private void GuardarRiscos()
-        {
-            Riscos r = new Riscos();
+        {                       
             r.Nombre = txtNombreRisco.Text;
             r.Calorias= int.Parse(txtCalorias.Text);
             r.Peso = int.Parse(txtPeso.Text);
 
             using (CnxEF db = new CnxEF())
             {               
-                //db.Riscos.Add(r);
+                db.Riscos.Add(r);
                 db.SaveChanges();
-            }
+                MessageBox.Show("Información del Risco Guardad Correctamente!!!");
+            }           
         }
+
+        //Traer de la BD los elementos existentes con todos sus datos.
+        public List<Elementos> listaElementos()
+        {
+            using (CnxEF db = new CnxEF())
+                return db.Database.SqlQuery<Elementos>("Select * from Elementos").ToList();               
+        }
+
 
         public void llenarLista()
         {
@@ -48,30 +55,25 @@ namespace Excursion
             var sumaCalorias = 0;
             var sumaPesos = 0;
 
-            //Traer de la BD los elementos existentes con todos sus datos.
-            List<objElementos> listaElementos = new List<objElementos>();
-            //listaElementos = "Select * from Elementos"; //Linea Comentada para que pueda funcionar una parte del programa
-
             //Siclo para encontrar los elementos contenidos en la lista que se pueden incluir dentro de la selección
-            foreach (objElementos lista in listaElementos)
+            List<Elementos> seleccion = new List<Elementos>();
+            foreach (Elementos lista in listaElementos())
             {
                 var calorias = lista.Calorias;
                 var peso = lista.Peso;
 
                 if (peso < p && calorias < c)
                 {
-                    sumaCalorias += calorias;
-                    sumaPesos += peso;
-
+                    sumaCalorias += lista.Calorias.Value;
+                    sumaPesos += lista.Peso.Value;
+                    
                     if (sumaPesos < p && sumaCalorias < c)
                     {
-                        List<objElementos> seleccion = new List<objElementos>();
-                        dgvElementosSeleccionados.DataSource = seleccion;
-
+                        seleccion.Add(lista);                      
+                        dgvElementosSeleccionados.DataSource = seleccion.ToList();
                     }
                 }
             }
-            
         }
 
     }

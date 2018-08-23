@@ -37,6 +37,7 @@ namespace Excursion
                 {
                     db.Elementos.Add(e);
                     db.SaveChanges();
+                    MessageBox.Show("Elemento Guardado correctamente!!!");
                 }
             }
             catch (Exception exp)

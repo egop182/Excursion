@@ -45,7 +45,7 @@
             // 
             // btnSeleccionarElementos
             // 
-            this.btnSeleccionarElementos.Location = new System.Drawing.Point(142, 223);
+            this.btnSeleccionarElementos.Location = new System.Drawing.Point(262, 232);
             this.btnSeleccionarElementos.Name = "btnSeleccionarElementos";
             this.btnSeleccionarElementos.Size = new System.Drawing.Size(197, 49);
             this.btnSeleccionarElementos.TabIndex = 0;
@@ -106,7 +106,7 @@
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.lblRisco);
             this.groupBox1.Controls.Add(this.txtNombreRisco);
-            this.groupBox1.Location = new System.Drawing.Point(13, 12);
+            this.groupBox1.Location = new System.Drawing.Point(133, 21);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(467, 195);
             this.groupBox1.TabIndex = 7;
@@ -132,14 +132,14 @@
             this.dgvElementosSeleccionados.Location = new System.Drawing.Point(13, 294);
             this.dgvElementosSeleccionados.Name = "dgvElementosSeleccionados";
             this.dgvElementosSeleccionados.RowTemplate.Height = 24;
-            this.dgvElementosSeleccionados.Size = new System.Drawing.Size(467, 155);
+            this.dgvElementosSeleccionados.Size = new System.Drawing.Size(697, 155);
             this.dgvElementosSeleccionados.TabIndex = 8;
             // 
             // Riscoss
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 461);
+            this.ClientSize = new System.Drawing.Size(737, 508);
             this.Controls.Add(this.dgvElementosSeleccionados);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSeleccionarElementos);

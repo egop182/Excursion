@@ -71,7 +71,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CnxEf.cs" />
     <Compile Include="Elementoss.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,9 +14,9 @@ namespace Excursion.Modelo
     
     public partial class Riscos
     {
-        public string Nombre { get; set; }
-        public Nullable<int> Calorias { get; set; }
-        public Nullable<int> Peso { get; set; }
         public int IdRiscos { get; set; }
+        public string Nombre { get; set; }
+        public int Calorias { get; set; }
+        public int Peso { get; set; }        
     }
 }
